@@ -2,95 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace WpThemeGenerator;
+namespace WpThemeGenerator\Generators;
 
-require 'Generator.php'; //todo remove
+require_once 'Generator.php'; //todo remove
+
 use Exception;
 
 class ThemeGenerator extends Generator
 {
-//    private $themeDirectoryPath = __DIR__ . '/unnamed';
-//
-//    /**
-//     * ThemeGenerator constructor.
-//     *
-//     * @param string $themeName
-//     */
-//    public function __construct(string $themeName)
-//    {
-//        $this->themeName = $themeName;
-//    }
-//
-//    public function init(): void
-//    {
-//        try {
-//            $themeDirectoryName       = $this->createThemeDirectoryName($this->themeName);
-//            $themeDirectoryPath       = __DIR__ . '/' . $themeDirectoryName;
-//            $this->themeDirectoryPath = $themeDirectoryPath;
-//            $this->createThemeDirectory($themeDirectoryPath);
-//            $this->createIndex();
-//            $this->createStyle();
-//            $this->createImagesDirectory();
-//        } catch (Exception $e) {
-//            echo $e->getMessage() . PHP_EOL;
-//        }
-//    }
-//
-//    public function createFooter()
-//    {
-//
-//    }
-//
-//    public function createHeader()
-//    {
-//
-//    }
-//
-//    public function createFrontPage()
-//    {
-//
-//    }
-//
-//    public function createFunctions()
-//    {
-//
-//    }
-//
-//    /**
-//     * @param string $path
-//     * @throws Exception
-//     */
-//    private function createThemeDirectory(string $path): void
-//    {
-//        if (! mkdir($path)) {
-//            throw new Exception('Не удалось создать папку с темой');
-//        }
-//    }
-//
-//    /**
-//     * @throws Exception
-//     */
-//    private function createIndex(): void
-//    {
-//        $indexFilePath = $this->themeDirectoryPath . '/index.php';
-//        $this->makeFile($indexFilePath);
-//    }
-//
-//    /**
-//     * @throws Exception
-//     */
-//    private function createStyle()
-//    {
-//        $styleFilePath = $this->themeDirectoryPath . '/style.css';
-//        $this->makeFile($styleFilePath);
-//    }
-//
-//    private function createImagesDirectory()
-//    {
-//        $imagesDirectoryPath = $this->themeDirectoryPath . '/images';
-//    }
-//
-
     /**
      * @var string
      */
@@ -104,15 +23,41 @@ class ThemeGenerator extends Generator
     /**
      * @var string
      */
-    private $htmlPath = '';
+    private $headerPath = '';
 
+    /**
+     * @var string
+     */
+    private $footerPath = '';
+
+    /**
+     * @var string
+     */
+    private $frontPagePath = '';
+
+    /**
+     * @var string
+     */
     private $cssPath = '';
 
-    public function __construct(string $themeName = 'unnamed')
+    /**
+     * @var string
+     */
+    private $functionsPath = '';
+
+    /**
+     * ThemeGenerator constructor.
+     *
+     * @param string $themeName
+     */
+    public function __construct(string $themeName = 'untitled')
     {
-        $this->themeName = $themeName;
-        $this->htmlPath  = __DIR__ . '/../data/index.html';
-        $this->cssPath   = __DIR__ . '/../data/style.css';
+        $this->themeName     = $themeName;
+        $this->headerPath    = __DIR__ . '/../data/header.html';
+        $this->footerPath    = __DIR__ . '/../data/footer.html';
+        $this->frontPagePath = __DIR__ . '/../data/php/front-page.php';
+        $this->cssPath       = __DIR__ . '/../data/style.css';
+        $this->functionsPath = __DIR__ . '/../data/php/functions.php';
     }
 
     /**
@@ -126,7 +71,8 @@ class ThemeGenerator extends Generator
             $this->makeStyleFile();
             $this->makeImagesDirectory();
         } catch (Exception $e) {
-            throw $e; //todo писать в логи
+            print_r('Не удалось инициализировать тему: ' . $e->getMessage());
+            die;
         }
     }
 
@@ -138,10 +84,11 @@ class ThemeGenerator extends Generator
         try {
             $headerFilePath = $this->themeDirectoryPath . '/header.php';
             $this->makeFile($headerFilePath);
-            $html = $this->getContent($this->htmlPath);
-            $this->putContent($headerFilePath, $html);
+            $headerContent = $this->getContent($this->headerPath);
+            $this->putContent($headerFilePath, $headerContent);
         } catch (Exception $e) {
-            throw $e;
+            print_r('Не удалось создать header.php: ' . $e->getMessage());
+            die;
         }
     }
 
@@ -153,23 +100,26 @@ class ThemeGenerator extends Generator
         try {
             $footerFilePath = $this->themeDirectoryPath . '/footer.php';
             $this->makeFile($footerFilePath);
-            //fill header html
+            $footerContent = $this->getContent($this->footerPath);
+            $this->putContent($footerFilePath, $footerContent);
         } catch (Exception $e) {
-            throw $e;
+            print_r('Не удалось создать footer.php: ' . $e->getMessage());
+            die;
         }
     }
 
     /**
      * @throws Exception
      */
-    public function makePageFile()
+    public function makeFrontPageFile()
     {
         try {
-            $pageFilePath = $this->themeDirectoryPath . '/page.php';
-            $this->makeFile($pageFilePath);
-            //fill header html
+            $frontPageFilePath = $this->frontPagePath;
+            $destination       = $this->themeDirectoryPath . '/front-page.php';
+            $this->copyFile($frontPageFilePath, $destination);
         } catch (Exception $e) {
-            throw $e;
+            print_r('Не удалось создать front-page.php: ' . $e->getMessage());
+            die;
         }
     }
 
@@ -179,11 +129,12 @@ class ThemeGenerator extends Generator
     public function makeFunctionsFile()
     {
         try {
-            $functionsFilePath = $this->themeDirectoryPath . '/functions.php';
-            $this->makeFile($functionsFilePath);
-            //fill header html
+            $functionsFilePath = $this->functionsPath;
+            $destination       = $this->themeDirectoryPath . '/functions.php';
+            $this->copyFile($functionsFilePath, $destination);
         } catch (Exception $e) {
-            throw $e;
+            print_r('Не удалось создать functions.php: ' . $e->getMessage());
+            die;
         }
     }
 
@@ -192,9 +143,14 @@ class ThemeGenerator extends Generator
      */
     private function makeThemeDirectory()
     {
-        $themeDirectoryName       = $this->makeThemeDirectoryName();
-        $this->themeDirectoryPath = __DIR__ . '/../output/' . $themeDirectoryName;
-        $this->makeDirectory($this->themeDirectoryPath);
+        try {
+            $themeDirectoryName       = $this->formatThemeName();
+            $this->themeDirectoryPath = __DIR__ . '/../output/' . $themeDirectoryName;
+            $this->makeDirectory($this->themeDirectoryPath);
+        } catch (Exception $e) {
+            print_r('Не удалось создать директорию темы: ' . $e->getMessage());
+            die;
+        }
     }
 
     /**
@@ -202,8 +158,13 @@ class ThemeGenerator extends Generator
      */
     private function makeIndexFile()
     {
-        $indexFilePath = $this->themeDirectoryPath . '/index.php';
-        $this->makeFile($indexFilePath);
+        try {
+            $indexFilePath = $this->themeDirectoryPath . '/index.php';
+            $this->makeFile($indexFilePath);
+        } catch (Exception $e) {
+            print_r('Не удалось создать index.php: ' . $e->getMessage());
+            die;
+        }
     }
 
     /**
@@ -217,14 +178,15 @@ class ThemeGenerator extends Generator
             $css = $this->getContent($this->cssPath);
             $this->putContent($styleFilePath, $css);
         } catch (Exception $e) {
-            throw $e;
+            print_r('Не удалось создать style.css: ' . $e->getMessage());
+            die;
         }
     }
 
     /**
      * @return string
      */
-    private function makeThemeDirectoryName(): string
+    private function formatThemeName(): string
     {
         return trim(preg_replace('#\s+#', '', strtolower($this->themeName)));
     }
@@ -234,9 +196,14 @@ class ThemeGenerator extends Generator
      */
     private function makeImagesDirectory()
     {
-        $imagesDirectoryPath = $this->themeDirectoryPath . '/images';
-        $this->makeDirectory($imagesDirectoryPath);
-        $gitignorePath = $imagesDirectoryPath . '/.gitignore';
-        $this->makeFile($gitignorePath);
+        try {
+            $imagesDirectoryPath = $this->themeDirectoryPath . '/images';
+            $this->makeDirectory($imagesDirectoryPath);
+            $gitignorePath = $imagesDirectoryPath . '/.gitignore';
+            $this->makeFile($gitignorePath);
+        } catch (Exception $e) {
+            print_r('Не удалось создать папку images: ' . $e->getMessage());
+            die;
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace WpThemeGenerator;
+namespace WpThemeGenerator\Generators;
 
 use Exception;
 
@@ -18,7 +18,8 @@ class Generator
             $fp = $this->openFile($fileName);
             $this->closeFile($fp);
         } catch (Exception $e) {
-            throw $e; //todo писать в логи
+            print_r($e->getMessage());
+            die;
         }
     }
 
@@ -29,7 +30,7 @@ class Generator
     protected function makeDirectory(string $pathname)
     {
         if (! mkdir($pathname) || ! chmod($pathname, 0777)) {
-            throw new Exception('Не удалось создать папку: ' . $pathname . PHP_EOL);
+            throw new Exception('не удалось создать папку: ' . $pathname . PHP_EOL);
         }
     }
 
@@ -41,7 +42,7 @@ class Generator
     protected function getContent(string $filename): string
     {
         if (! $content = file_get_contents($filename)) {
-            throw new Exception('Не удалось получить содержимое файла: ' . $filename . PHP_EOL);
+            throw new Exception('не удалось получить содержимое файла: ' . $filename . PHP_EOL);
         }
         return $content;
     }
@@ -54,7 +55,19 @@ class Generator
     protected function putContent(string $filename, string $data)
     {
         if (! file_put_contents($filename, $data)) {
-            throw new Exception('Не удалось записать содержимое в файл: ' . $filename . PHP_EOL);
+            throw new Exception('не удалось записать содержимое в файл: ' . $filename . PHP_EOL);
+        }
+    }
+
+    /**
+     * @param string $source
+     * @param string $dest
+     * @throws Exception
+     */
+    protected function copyFile(string $source, string $dest)
+    {
+        if (! copy($source, $dest)) {
+            throw new Exception('не удалось скопировать файл: ' . $source . PHP_EOL);
         }
     }
 
@@ -67,7 +80,7 @@ class Generator
     private function openFile(string $filename, string $mode = 'w')
     {
         if (! ($fp = fopen($filename, $mode)) || ! chmod($filename, 0777)) {
-            throw new Exception('Не удалось открыть файл: ' . $filename . PHP_EOL);
+            throw new Exception('не удалось открыть файл: ' . $filename . PHP_EOL);
         }
         return $fp;
     }
@@ -79,7 +92,7 @@ class Generator
     private function closeFile($handle)
     {
         if (! fclose($handle)) {
-            throw new Exception('Не удалось закрыть файл: ' . $handle . PHP_EOL);
+            throw new Exception('не удалось закрыть файл: ' . $handle . PHP_EOL);
         }
     }
 }
