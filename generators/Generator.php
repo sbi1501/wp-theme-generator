@@ -28,7 +28,7 @@ class Generator
      */
     protected function makeDirectory(string $pathname)
     {
-        if (! mkdir($pathname)) {
+        if (! mkdir($pathname) || ! chmod($pathname, 0777)) {
             throw new Exception('Не удалось создать папку: ' . $pathname . PHP_EOL);
         }
     }
@@ -66,7 +66,7 @@ class Generator
      */
     private function openFile(string $filename, string $mode = 'w')
     {
-        if (! $fp = fopen($filename, $mode)) {
+        if (! ($fp = fopen($filename, $mode)) || ! chmod($filename, 0777)) {
             throw new Exception('Не удалось открыть файл: ' . $filename . PHP_EOL);
         }
         return $fp;
