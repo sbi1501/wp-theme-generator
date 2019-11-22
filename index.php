@@ -6,7 +6,7 @@ declare(strict_types = 1);
  * Plugin Name: Wordpress Theme Generator
  */
 
-require 'generators\ThemeGenerator.php';
+require 'generators/ThemeGenerator.php';
 
 register_activation_hook(__FILE__, 'generateTheme');
 

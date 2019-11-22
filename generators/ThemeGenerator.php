@@ -111,8 +111,8 @@ class ThemeGenerator extends Generator
     public function __construct(string $themeName = 'unnamed')
     {
         $this->themeName = $themeName;
-        $this->htmlPath  = __DIR__ . '/data/index.html';
-        $this->cssPath   = __DIR__ . '/data/style.css';
+        $this->htmlPath  = __DIR__ . '/../data/index.html';
+        $this->cssPath   = __DIR__ . '/../data/style.css';
     }
 
     /**
@@ -193,7 +193,7 @@ class ThemeGenerator extends Generator
     private function makeThemeDirectory()
     {
         $themeDirectoryName       = $this->makeThemeDirectoryName();
-        $this->themeDirectoryPath = __DIR__ . '/' . $themeDirectoryName;
+        $this->themeDirectoryPath = __DIR__ . '/../output/' . $themeDirectoryName;
         $this->makeDirectory($this->themeDirectoryPath);
     }
 
