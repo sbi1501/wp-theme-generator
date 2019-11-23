@@ -9,22 +9,25 @@ declare(strict_types = 1);
 namespace WpThemeGenerator;
 
 use WpThemeGenerator\Generators\ThemeGenerator;
+use WpThemeGenerator\Parsers\Parser;
 
 require 'generators/ThemeGenerator.php';
+require 'parsers/Parser.php';
 
 register_activation_hook(__FILE__, 'generateTheme');
 
 function generateTheme()
 {
     $themeName = 'Venture Translations';
-    $obj = new ThemeGenerator($themeName);
+    $themeGenerator = new ThemeGenerator($themeName);
+    $parser = new Parser();
     try {
-        $obj->init();
-        //parse html
-        $obj->makeHeaderFile();
-        $obj->makeFunctionsFile();
-        $obj->makeFooterFile();
-        $obj->makeFrontPageFile();
+        $themeGenerator->init();
+        $parser->parseHtml();
+        $themeGenerator->makeHeaderFile();
+        $themeGenerator->makeFunctionsFile();
+        $themeGenerator->makeFooterFile();
+        $themeGenerator->makeFrontPageFile();
     } catch (Exception $exception) {
         echo $exception->getMessage();
     }

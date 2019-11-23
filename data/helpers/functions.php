@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 function enqueue_styles()
 {
-    $handle = 'theme-style'; //todo сделать уникальным
+    $handle = 'venturetranslations-style'; //todo сделать уникальным
     wp_enqueue_style($handle, get_stylesheet_uri());
 }
 

@@ -53,11 +53,11 @@ class ThemeGenerator extends Generator
     public function __construct(string $themeName = 'untitled')
     {
         $this->themeName     = $themeName;
-        $this->headerPath    = __DIR__ . '/../data/header.html';
-        $this->footerPath    = __DIR__ . '/../data/footer.html';
-        $this->frontPagePath = __DIR__ . '/../data/php/front-page.php';
+        $this->headerPath    = __DIR__ . '/../var/header.html';
+        $this->footerPath    = __DIR__ . '/../var/footer.html';
+        $this->frontPagePath = __DIR__ . '/../data/helpers/front-page.php';
         $this->cssPath       = __DIR__ . '/../data/style.css';
-        $this->functionsPath = __DIR__ . '/../data/php/functions.php';
+        $this->functionsPath = __DIR__ . '/../data/helpers/functions.php';
     }
 
     /**
