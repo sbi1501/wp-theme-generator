@@ -1,0 +1,1145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" name="viewport" />
+<meta content="192" property="og:image:width">
+<meta content="192" property="og:image:height">
+<meta content="HTML starter kit" property="og:title">
+<meta content="HTML starter kit" property="og:description">
+    <!-- TODO Исправить-->
+    <!--<meta content="https://github.com/SuhushinAS/html-layout-kit" property="og:url">
+    <meta content="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" property="og:image">-->
+<title>HTML starter kit</title>
+<link rel="shortcut icon" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="manifest" href="/favicon/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#0f1418"><meta name="application-name" content="HTML starter kit"><link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/favicon/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/favicon/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="HTML starter kit"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicon/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicon/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicon/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicon/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/favicon/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/favicon/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/favicon/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/favicon/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/favicon/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/favicon/apple-touch-startup-image-1536x2008.png"><link rel="icon" type="image/png" sizes="228x228" href="/favicon/coast-228x228.png"><meta name="msapplication-TileColor" content="#0f1418"><meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"><meta name="msapplication-config" content="/favicon/browserconfig.xml"><link rel="yandex-tableau-widget" href="/favicon/yandex-browser-manifest.json"><link href="/index.min.css?ef91a55f07e116d6d018" rel="stylesheet"></head>
+<body>
+<div class="layout">
+    <header class="layout__header">
+        <div class="header d_f j-c_sb">
+    <nav class="header__nav">
+        <div class="burger-menu j-burger-menu">
+    <div class="burger-menu__toggle">
+        <button class="burger-menu__toggle-button j-burger-button">
+            <svg class="svg-icon" viewBox="0 0 18 14">
+    <use xlink:href="#menu"></use>
+</svg>
+
+        </button>
+    </div>
+    <div class="burger-menu__inner">
+        <ul class="burger-menu__additional">
+            <li class="burger-menu__item">
+                <div class="header__logo">Venture Translations</div>
+            </li>
+            <li class="burger-menu__item">
+                <div class="burger-menu__toggle">
+                    <button class="burger-menu__close-button j-burger-menu-close-button">
+                        <svg class="svg-icon" viewBox="0 0 17 16">
+    <use xlink:href="#close"></use>
+</svg>
+
+                    </button>
+                </div>
+            </li>
+        </ul>
+        <ul class="burger-menu__main">
+            <li class="burger-menu__item burger-menu__item_t-h">
+                <button class="btn btn__primary">ОЦЕНИТЬ ПРОЕКТ</button>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">ГЛАВНАЯ</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">En</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">НАПРАВЛЕНИЯ</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">УСЛУГИ</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link " href="/">СПИСОК ЯЗЫКОВ</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">ПОРТФОЛИО</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">ОТЗЫВЫ</a>
+            </li>
+            <li class="burger-menu__item">
+                <a class="header-nav__link" href="/">О НАС</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        <div class="header-nav">
+    <div class="header-nav__inner">
+        <ul class="header-nav__main">
+            <li class="header-nav__item">
+                <a class="header-nav__link" href="/">ПОРТФОЛИО</a>
+            </li>
+            <li class="header-nav__item">
+                <a class="header-nav__link" href="/">УСЛУГИ</a>
+            </li>
+            <li class="header-nav__item">
+                <a class="header-nav__link" href="/">О НАС</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header-nav__actions">
+        <ul class="header-nav__additional">
+            <li class="header-nav__item header-nav__item_space">
+                <a class="header__logo">Venture Translations</a>
+            </li>
+            <li class="header-nav__item header-nav__item_hide-mobile header-nav__item_space">
+                <a class="btn__link btn btn__primary" href="#evaluate">ОЦЕНИТЬ ПРОЕКТ</a>
+            </li>
+            <li class="header-nav__item header-nav__item_hide-mobile header-nav__item_space">
+                <a class="header-nav__link header-nav__link_active j-lang" href="/">EN</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+</div>
+
+    </header>
+    <div class="layout__inner">
+        <div class="layout__body">
+            <div class="content">
+    <div>
+        <div class="main">
+<div class="airship">
+    <div class="airship__block"></div>
+    <div class="airship__column">
+<div class="airship__icon"><svg class="svg-icon" viewBox="0 0 182 99">
+    <use xlink:href="#gray-airship"></use>
+</svg>
+</div>
+<div class="airship__dots">
+        <div class="rope"></div>
+</div>
+<div class="airship__anchor"><svg class="svg-icon" viewBox="0 0 31 41">
+    <use xlink:href="#gray-anchor"></use>
+</svg>
+</div>
+    </div>
+</div>
+
+    <div class="main__column">
+    <div class="main__name f-z_h3">Venture Translations</div>
+    <div class="main__title f-z_h1">Ваш проводник
+ к иностранным 
+берегам</div>
+    <div class="main__subtitle f-z_h3">Cделаем ваш проект понятным всему миру</div>
+    </div>
+    <div class="main-list f-z_p t-t_u">
+    <div class="main-list__item">
+        <div class="main-list__number f-z_h2">49</div>
+        <div>языковых пар</div>
+    </div>
+    <div class="main-list__item">
+        <div class="main-list__number f-z_h2">150</div>
+        <div>сотрудников по всему миру</div></div>
+    <div class="main-list__item">
+        <div class="main-list__number f-z_h2">4</div>
+        <div>года на рынке</div>
+    </div>
+</div>
+
+</div>
+    </div>
+    <div class="content__actions">
+        <div class="actions">
+    <div class="action-bg__lines"><div class="lines__column">
+        <div class="lines__chain">
+            <div class="lines__rope">
+                <div class="rope"></div>
+            </div>
+            <div class="lines__anchor"><svg class="svg-icon" viewBox="0 0 32 41">
+    <use xlink:href="#anchor-big"></use>
+</svg>
+</div>
+        </div>
+    </div>
+    <div class="lines__column">
+        <div class="lines__ball-lg d_n d_xl_b">
+            <svg class="svg-icon" viewBox="0 0 99 194">
+    <use xlink:href="#ball"></use>
+</svg>
+
+        </div>
+        <div class="lines__cloud-ball d_n d_xl_b">
+            <svg class="svg-icon" viewBox="0 0 85 37">
+    <use xlink:href="#cloud-ball"></use>
+</svg>
+
+        </div>
+        <div class="lines__line-tab d_n d_md_b">
+            <div class="rope"></div>
+        </div>
+        <div class="lines__line-desk d_n d_lg_b">
+            <div class="rope"></div>
+        </div>
+        <div class="lines__cloud-sm d_n d_md_b">
+            <svg class="svg-icon" viewBox="0 0 69 29">
+    <use xlink:href="#clous-sm"></use>
+</svg>
+
+        </div>
+    </div>
+    <div class="lines__column">
+        <div class="lines__icons d_n d_md_b">
+            <div class="lines__airship d_n d_md_b"><svg class="svg-icon" viewBox="0 0 181 100">
+    <use xlink:href="#airship"></use>
+</svg>
+</div>
+            <div class="lines__rope-airship">
+                <div class="rope"></div>
+            </div>
+            <div class="lines__anchor-big"><svg class="svg-icon" viewBox="0 0 32 41">
+    <use xlink:href="#anchor-big"></use>
+</svg>
+</div>
+        </div>
+    </div></div>
+<div class="action-bg__cloud-left d_n d_xl_b">
+    <svg class="svg-icon" viewBox="0 0 85 37">
+    <use xlink:href="#cloud-ball"></use>
+</svg>
+
+</div>
+<div class="action-bg__cloud d_n d_md_b">
+    <div class="clouds__item_tablet"><svg class="svg-icon" viewBox="0 0 310 123">
+    <use xlink:href="#cloud-tab"></use>
+</svg>
+</div>
+<div class="clouds__item_desktop"><svg class="svg-icon" viewBox="0 0 388 132">
+    <use xlink:href="#cloud-big"></use>
+</svg>
+</div>
+<div class="clouds__item_lg"><svg class="svg-icon" viewBox="0 0 596 162">
+    <use xlink:href="#cloud-big-lg"></use>
+</svg>
+</div>
+
+</div>
+<div class="action-bg__wheel-desk d_n d_lg_b">
+    <svg class="svg-icon" viewBox="0 0 62 62">
+    <use xlink:href="#wheel-desk"></use>
+</svg>
+
+</div>
+<div class="action-bg__wheel d_n d_md_b">
+    <svg class="svg-icon" viewBox="0 0 60 60">
+    <use xlink:href="#wheel"></use>
+</svg>
+
+</div>
+<div class="action-bg__dots-ball d_n d_lg_b">
+    <div class="rope"></div>
+</div>
+<div class="action-bg__ball d_n d_lg_b">
+    <svg class="svg-icon" viewBox="0 0 99 194">
+    <use xlink:href="#ball"></use>
+</svg>
+
+</div>
+<div class="action-bg__cloud-md d_n d_md_b">
+    <svg class="svg-icon" viewBox="0 0 88 38">
+    <use xlink:href="#cloud-md"></use>
+</svg>
+
+</div>
+<div class="action-bg__wheel-xs d_n d_lg_b">
+    <svg class="svg-icon" viewBox="0 0 23 23">
+    <use xlink:href="#wheel-xs"></use>
+</svg>
+
+</div>
+
+    <div class="actions__wrapper">
+        <div class="actions__title f-z_h1">Мы можем всё</div>
+        <div class="actions__subtitle f-z_h3">Почти всё что угодно <div class="actions__image"><svg class="svg-icon" viewBox="0 0 13 12">
+    <use xlink:href="#star"></use>
+</svg>
+</div></div>
+    </div>
+    <div class="actions__list f-z_xs_small">
+        <div class="actions__list-block">
+            <div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Локализация</div>
+</div>
+<div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Создание текстов</div>
+</div>
+<div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Редактирование текстов</div>
+</div>
+
+        </div>
+        <div class="actions__list-block">
+            <div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Художественный перевод</div>
+</div>
+<div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Дизайн и верстка локализуемых материалов</div>
+</div>
+<div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Адаптация графических элементов</div>
+</div>
+
+        </div>
+            <div class="actions__list-block">
+             <div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Локализационное тестирование</div>
+</div>
+<div class="actions-list__item">
+    <div class="actions-list__item-title f-z_p">Оценка качества текстов</div>
+</div>
+
+                <div class="btn_wrapper">
+                    <a class="btn__link btn btn__zig-zag f-z_s t-t_u" href="#evaluate">ваша сфера</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+    </div>
+    <div class="content__performance">
+        <div class="performance">
+    <div class="performance__ball-clouds">
+        <div class="performance__ball">
+            <svg class="svg-icon" viewBox="0 0 99 194">
+    <use xlink:href="#ball"></use>
+</svg>
+
+        </div>
+        <div class="performance__clouds">
+            <svg class="svg-icon" viewBox="0 0 109 78">
+    <use xlink:href="#clouds"></use>
+</svg>
+
+        </div>
+    </div>
+        <div class="ship-rope-anchor">
+        <div class="ship-rope-anchor__icon-airship">
+            <svg class="svg-icon" viewBox="0 0 181 100">
+    <use xlink:href="#airship"></use>
+</svg>
+
+        </div>
+        <div class="ship-rope-anchor__icon-line">
+            <div class="ship-rope-anchor__wrapper-line">
+                <div class="rope"></div>
+            </div>
+        </div>
+        <div class="ship-rope-anchor__icon-anchor">
+                <svg class="svg-icon" viewBox="0 0 22 29">
+    <use xlink:href="#anchor"></use>
+</svg>
+
+        </div>
+        <div class="performance-list">
+    <div class="performance-list__icons">
+        <div class="performance-list__icon_clouds">
+            <svg class="svg-icon" viewBox="0 0 109 78">
+    <use xlink:href="#clouds"></use>
+</svg>
+
+        </div>
+        <div class="performance-list__icon_cloud">
+            <svg class="svg-icon" viewBox="0 0 66 27">
+    <use xlink:href="#cloud"></use>
+</svg>
+
+        </div>
+    </div>
+    <div class="performance-list__spheres">
+        <ul class="performance-list__content">
+            <li class="performance-list__item">ГЕЙМДЕВ</li>
+            <li class="performance-list__item">IT</li>
+            <li class="performance-list__item">DIGITAL</li>
+            <li class="performance-list__item">РЕКЛАМА</li>
+            <li class="performance-list__item">ФИНТЕХ</li>
+            <li class="performance-list__item">МАРКЕТИНГ</li>
+            <li class="performance-list__item">ОБУЧАЮЩИЕ ПРОГАММЫ</li>
+        </ul>
+    <a class="btn__link performance-list__button btn btn__zig-zag" href="#evaluate">ВАША СФЕРА</a>
+    </div>
+</div>
+    </div>
+
+    <!--    компонент будет меняться performance-list с  при анимации-->
+        <div class="performance-title">
+        <div class="performance-title__title">
+            Для нас<br> нет границ<br> между сферами
+        </div>
+        <div class="performance-title__text f-z_h3">
+            7+ основных направлений
+         </div>
+        <div class="performance-title__icon-cloud">
+            <svg class="svg-icon" viewBox="0 0 66 27">
+    <use xlink:href="#cloud"></use>
+</svg>
+
+        </div>
+    </div>
+    <!--    компоненты будут меняться при анимации-->
+</div>
+
+    </div>
+    <div>
+        <div class="language-map">
+    <div class="language-map__background">
+       <svg class="svg-icon" viewBox="">
+    <use xlink:href="#map"></use>
+</svg>
+
+    </div>
+    <div class="language-map__title f-z_h1">
+        С вами работают <br>
+профессионалы
+ <br>носители языка
+ <br>из <span>22</span> стран мира
+    </div>
+    <button class="language-map__button j-open-lang-list">
+        Полный список языковых пар
+    </button>
+</div>
+
+    </div>
+    <div>
+        <div class="slider-wrap">
+    <div class="slider-wrap__slider">
+        <div class="slide">
+    <div class="slide__company"><div class="slide-company">
+    <div class="slide-company__title f-z_h2">
+        kaspersky
+    </div>
+    <div class="slide-company__description">
+        <div class="slide-company__description-head f-z_h4">
+            Kaspersky Automated Security Awareness Platform
+        </div>
+        <div class="slide-company__description-body f-z_small">
+            Онлайн-инструмент для развития навыков кибербезопасности
+        </div>
+    </div>
+</div></div>
+    <div class="slide__info"><div class="slide-info">
+    <ul data-tabs class="info-tabs">
+    <li class="info-tab">
+    <a href="#project" class="info-tab__link j-info-tab">О проекте</a>
+</li>
+<li class="info-tab">
+    <a href="#review" class="info-tab__link j-info-tab">Отзыв</a>
+</li>
+
+</ul>
+
+    <div class="slide-info__content">
+        <div id="project" class="slide-info__content-item slide-info__content-about active j-info-tab-content">
+            <div class="info-block__title">
+    Объем работ
+</div>
+<div class="info-block__text">
+    500 000+ слов исходного текста
+</div>
+<div class="info-block__title">
+    Типы работ
+</div>
+<div class="info-block__text">
+    Создание русского текста уроков и сопроводительных материалов; редактирование русских текстов интерфейса  и сопроводительных материалов предоставленных заказчиком; перевод всех материалов платформы на 8 языков
+</div>
+<div class="info-block__title">
+    Языки
+</div>
+<div class="info-block__text">
+    <div class="lang-block">Ru</div>
+<div class="lang-block">Ru-En</div>
+<div class="lang-block">En-Ge</div>
+<div class="lang-block">En-It</div>
+<div class="lang-block">En-Fr</div>
+<div class="lang-block">En-Sp</div>
+<div class="lang-block">En-Ar</div>
+<div class="lang-block">En-Du</div>
+<div class="lang-block">En-Pt</div>
+
+</div>
+<div class="info-block__title">
+    Команда
+</div>
+<div class="info-block__text">
+    50 человек
+</div>
+<div class="info-block__title">
+    Сроки
+</div>
+<div class="info-block__text">
+    С ноября 2017 по настоящее время
+</div>
+
+        </div>
+        <div id="review" class="slide-info__content-item slide-info__content-review j-info-tab-content">
+            Огромный объем трансформирующихся в процессе работы материалов;
+            регулярные обновления; узкоспецифическая тематика; подбор команд,
+            готовых работать на проекте в течение нескольких лет; работа
+            по совместно созданным жестким гайдлайнам; координация исполнителей в нескольких часовых поясах.
+        </div>
+    </div>
+</div></div>
+</div>
+
+
+        <div class="slider-wrap__review">
+            Огромный объем трансформирующихся в процессе работы материалов;
+            регулярные обновления; узкоспецифическая тематика; подбор команд,
+            готовых работать на проекте в течение нескольких лет; работа
+            по совместно созданным жестким гайдлайнам; координация исполнителей в нескольких часовых поясах.
+        </div>
+        <div class="slider-dots">
+    <div class="slider-dots__wrap">
+        <div class="slider-dots__item"></div>
+        <div class="slider-dots__item slider-dots__item_active"></div>
+        <div class="slider-dots__item"></div>
+        <div class="slider-dots__item"></div>
+    </div>
+</div>
+    </div>
+    <div class="slider-wrap__form">
+        <div class="slider-wrap__form-wrapper">
+            <div class="slider-wrap__form-header">Тестовое задание бесплатно</div>
+            <div class="slider-wrap__form-message">Оставьте заявку, и наш менеджер свяжется с вами в течение рабочего дня.</div>
+        </div>
+       <div class="j-form"><form class="form" method="post" action="#">
+    <div class="form__row d_i-b">
+        <input class="j-form-input" type="text" placeholder="Ваше имя *" required>
+    </div>
+    <div class="form__row d_i-b">
+        <input class="j-form-input" type="email" placeholder="Ваша электронная почта *" required>
+    </div>
+    <div class="form__row d_i-b">
+        <input class="j-form-input" type="tel" placeholder="Ваш контактный телефон *" required>
+    </div>
+    <div class="form__row d_i-b">
+        <textarea placeholder="Краткое описание задачи"></textarea>
+    </div>
+    <div class="form__action">
+    <div class="form__row form__row_file">
+        <label for="form__file" class="form__file f-z_small">Прикрепить файл</label>
+        <input id="form__file" class="form__file-input" type="file">
+    </div>
+    <div class="form__row d_f  f-d_c">
+        <button class="form__button j-form-button" type="submit" title="Submit">ОТПРАВИТЬ ЗАДАНИЕ</button>
+        <div class="form__message f-z_small_small">Нажимая «Отправить задание» вы даете согласие на обработку персональных данных.</div>
+    </div>
+    </div>
+</form>
+</div>
+    </div>
+</div>
+    </div>
+    <div class="content__clients">
+        <div class="clients">
+    <div class="clients__container">
+        <div class="clients__title f-z_h4 t-t_u d_sm_b d_md_n">Клиенты о нас</div>
+    <div class="clients__container-image">
+    <div class="clients__container-icon">
+        <div class="clients__container-icon_wave p_r">
+            <svg class="svg-icon" viewBox="0 0 130 36">
+    <use xlink:href="#waves"></use>
+</svg>
+
+        </div>
+        <div class="clients__container-icon_border d_sm_n d_md_b d_lg_b p_r">
+            <svg class="svg-icon" viewBox="0 0 113 140">
+    <use xlink:href="#border"></use>
+</svg>
+
+        </div>
+        <div class="clients__container-icon_logo p_r">
+        </div>
+    </div>
+    <div>
+    <div class="f-z_h4">Зухра Ужуева</div>
+    <div class="clients__paragraph f-z_h4">Директор по управлению
+        проектами E-Learning center</div>
+    </div>
+    </div>
+    <div class="clients__container-text">
+        <div class="clients__title t-t_u f-z_h4 d_sm_n d_md_b">Клиенты о нас</div>
+        <div class="clients__content f-z_p">
+        Что важно, когда отдаешь часть процесса на аутсорс? Верно, отдать задачу и не думать о качестве и сроках,
+        а просто отстроить дальше внутренний процесс под дату, названную партнером.
+        Вот такого партнера мы нашли в лице Venture Translations.
+            Что самое ценное в сотрудничестве:
+        - Быстрый отклик на запрос;
+        - Высокий уровень менеджмента процесса, можно отдать и не думать, будет ли задача выполнена в срок 
+и с должным качеством;
+        - Качественный этап выявления потребностей. Задаются правильные вопросы, которые позволяют избежать в будущем недопониманий 
+по ожидаемому результату;
+        - Наличие очень обширной базы даже самых узких специалистов;
+        - И, наверное, самое важное в любом партнерстве — просто комфортно 
+и спокойно делать совместные проекты :)
+        </div>
+    </div>
+        <div class="clients__container-line d_sm_n d_md_b d_lg_b"></div>
+    </div>
+</div>
+
+
+    </div>
+    <div class="error-project">
+        <div class="error-project">
+    <div class="error-project__blackout"></div>
+    <div class="error-project__icon_line">
+        <svg class="svg-icon" viewBox="0 0 1615 54">
+    <use xlink:href="#four-line"></use>
+</svg>
+
+    </div>
+    <div class="error-project__icon_octopus">
+        <svg class="svg-icon" viewBox="0 0 197 104">
+    <use xlink:href="#octopus"></use>
+</svg>
+
+    </div>
+    <div class="error-project__icon_wavy-line">
+        <svg class="svg-icon" viewBox="0 0 1609 24">
+    <use xlink:href="#line"></use>
+</svg>
+
+    </div>
+    <div class="error-project__icon_free-line">
+        <svg class="svg-icon" viewBox="0 0 1920 64">
+    <use xlink:href="#free-line"></use>
+</svg>
+
+    </div>
+    <div class="error-project__icon_six-line">
+        <svg class="svg-icon" viewBox="0 0 1920 92">
+    <use xlink:href="#six-line"></use>
+</svg>
+
+    </div>
+        <div class="error-project__main-header">
+            <div class="error-project__main-header_rope">
+                <svg class="svg-icon" viewBox="0 0 2 4977">
+    <use xlink:href="#line-point"></use>
+</svg>
+
+            </div>
+        <p class="error-project__header f-z_h1">Поможем избежать ошибок</p>
+        <p class="error-project__subtitles f-z_h3">Как не утопить свой проект?</p>
+            <div class="error-project__icon_boat">
+                <svg class="svg-icon" viewBox="0 0 66 43">
+    <use xlink:href="#boat"></use>
+</svg>
+
+            </div>
+        </div>
+        <div class="error-project__list">
+            <div class="error-project-list">
+    <div class="error-project-list__item">
+        <div>
+            <div class="error-project-list__rope-up">
+                <div class="rope"></div>
+            </div>
+            <p class="error-project-list__title error-project-list__title_up">Искажение смысла</p>
+        </div>
+        <div class="error-project-list__marker">
+            <div class="error-project-list__line"></div>
+        </div>
+        <div class="error-project-list__text">
+            <div class="error-project-list__text-rope">
+                <div class="rope"></div>
+            </div>
+            <p class="error-project-list__description f-z_h5">Дословный перевод, перевод без учета контекста и целевой аудитории, краудсорсинг, машинный перевод недопустимы 
+в текстах, которые будут читать живые люди. Специалисты, не являющиеся представителями 
+языковой среды и использующие редактуру дословного машинного перевода совершают ошибки, ведущие к потере культурного кода или полной потере смысла.</p>
+        </div>
+    </div>
+    <div class="error-project-list__item">
+        <p class="error-project-list__title">Потеря культурного кода</p>
+        <div class="error-project-list__marker">
+            <div class="error-project-list__line"></div>
+        </div>
+        <div class="error-project-list__text">
+            <div class="error-project-list__text-rope">
+                <div class="rope"></div>
+            </div>
+            <p class="error-project-list__description f-z_h5">В арабских странах совсем иначе подходят к изображениям, чем это принято в европейских культурах. В Англии и США, Португалии и Бразилии, Испании и странах Латинской Америки одни и те же слова могут обозначать разные вещи, а одни и те же вещи называться по-разному. Дословно переведенная шутка не будет понятна носителям языка 
+и вызовет только насмешку.</p>
+        </div>
+    </div>
+    <div class="error-project-list__item">
+        <p class="error-project-list__title">Переплаты при обновлении контента</p>
+        <div class="error-project-list__marker">
+            <div class="error-project-list__line"></div>
+        </div>
+        <div class="error-project-list__text">
+            <div class="error-project-list__text-rope">
+                <div class="rope"></div>
+            </div>
+            <p class="error-project-list__description f-z_h5">Зачастую возникает необходимость обновления или пополнения ранее созданного контента. В таких случаях вы не обязаны заказывать переработку всех материалов с нуля. Должны быть оплачены только вносимые изменения.</p>
+        </div>
+    </div>
+    <div class="error-project-list__item">
+        <p class="error-project-list__title">Потеря доверия аудитории</p>
+        <div class="error-project-list__marker">
+            <div class="error-project-list__line"></div>
+        </div>
+        <div class="error-project-list__text">
+            <div class="error-project-list__text-rope">
+                <div class="rope"></div>
+            </div>
+            <p class="error-project-list__description f-z_h5">Выходя на новые рынки, необходимо говорить 
+с людьми на их родном языке. Текст, полный ошибок, автоматически подрывает доверие пользователей 
+и клиентов к продукту и компании в целом, заставляет сомневаться в качестве работы.</p>
+        </div>
+    </div>
+    <div class="error-project-list__item">
+        <p class="error-project-list__title">Потеря информации о проекте</p>
+        <div class="error-project-list__marker">
+            <div class="error-project-list__line"></div>
+        </div>
+        <div class="error-project-list__text">
+            <div class="error-project-list__text-rope">
+                <div class="rope"></div>
+            </div>
+            <p class="error-project-list__description f-z_h5">Неотлаженные внутренние процессы 
+на стороне подрядчика (текучка или непродуманное перераспределение кадров) плохо влияют на результат работы. Возникает путаница в материалах и сведениях 
+ по проекту, теряется погружение в контекст.</p>
+        </div>
+    </div>
+    <div class="error-project-list__item">
+        <p class="error-project-list__title">Потеря преимуществ 
+в конкурентной борьбе</p>
+        <div class="error-project-list__marker">
+            <div class="error-project-list__line"></div>
+        </div>
+        <div class="error-project-list__text">
+            <div class="error-project-list__icon">
+                <div class="error-project-list__icon-rope">
+                    <div class="rope"></div>
+                </div>
+                <div class="error-project-list__icon-anchor">
+                    <svg class="svg-icon" viewBox="0 0 22 29">
+    <use xlink:href="#anchor"></use>
+</svg>
+
+                </div>
+            </div>
+            <div class="f-z_h5">Возможность обратиться к своей аудитории на любом языке грамотно - серьёзная заявка о собственной компетентности. Если такая заявка не оправдывает себя - это серьёзный удар 
+по репутации.</div>
+            <div class="error-project-list__icon-fish">
+                <svg class="svg-icon" viewBox="0 0 400 234">
+    <use xlink:href="#fish"></use>
+</svg>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+</div>
+    </div>
+    <div class="content__advantages">
+        <div class="advantages">
+    <div class="advantages__bg">
+    <div class="advantages-bg">
+    <div class="advantages-bg__icons">
+        <div class="advantages-bg__ball d_md_b"><svg class="svg-icon" viewBox="0 0 99 194">
+    <use xlink:href="#ball"></use>
+</svg>
+</div>
+        <div class="advantages-bg__anchor"><svg class="svg-icon" viewBox="0 0 32 41">
+    <use xlink:href="#anchor-big"></use>
+</svg>
+</div>
+    </div>
+    <div class="advantages-bg__cloud">
+    <div class="advantages-bg__cloud-wheel">
+        <svg class="svg-icon" viewBox="0 0 500 140">
+    <use xlink:href="#cloud-wheel"></use>
+</svg>
+
+    </div>
+    <div class="advantages-bg__cloud-wheel-big">
+        <svg class="svg-icon" viewBox="0 0 606 154">
+    <use xlink:href="#cloud-wheel-big"></use>
+</svg>
+
+    </div>
+        <div class="advantages-bg__cloud-wheel-small  advantages-bg__cloud-wheel-small_up">
+            <svg class="svg-icon" viewBox="0 0 120 50">
+    <use xlink:href="#cloud-wheel-small"></use>
+</svg>
+
+        </div>
+        <div class="advantages-bg__cloud-wheel-small advantages-bg__cloud-wheel-small_down">
+            <svg class="svg-icon" viewBox="0 0 120 50">
+    <use xlink:href="#cloud-wheel-small"></use>
+</svg>
+
+        </div>
+    <div class="advantages-bg__cloud-wheel-lg-big">
+        <svg class="svg-icon" viewBox="0 0 642 163">
+    <use xlink:href="#cloud-wheel-lg-big"></use>
+</svg>
+
+    </div>
+    </div>
+</div>
+
+    </div>
+    <div class="advantages__title">
+        <p class="advantages__title_size f-z_h1">Мы </p>
+        <p class="advantages__title_size f-z_h1"> на высоте</p>
+    </div>
+<div class="advantages__total-list">
+    <div class="advantages__list advantages__list_up">
+    <div class="advantages__approach advantages__list-item">
+        <p class="advantages__subtitles f-z_h3">Индивидуальный <br> подход</p>
+        <p class="advantages__text advantages__text_padding f-z_p">Выделяем команду специалистов и курирующего менеджера под каждый проект.</p>
+    </div>
+    <div class="advantages__flexibility advantages__list-item">
+        <p class="advantages__subtitles advantages__subtitles_line-height f-z_h3">Гибкость</p>
+        <p class="advantages__text f-z_p">Подстраиваем внутренние процессы под ваши потребности.</p>
+    </div>
+    </div>
+    <div class="advantages__list advantages__list_middle">
+    <div class="advantages__code advantages__list-item">
+        <p class="advantages__subtitles f-z_h3">Передача <br> культурного кода</p>
+        <p class="advantages__text advantages__text_padding f-z_p">Адаптируем перевод под контекст культурной среды и целевую аудиторию.</p>
+    </div>
+    <div class="advantages__maintenance advantages__list-item">
+         <p class="advantages__subtitles advantages__subtitles_line-height f-z_h3">Сопровождение</p>
+        <p class="advantages__text f-z_p">Сопровождаем ваш проект до победного конца. Даем пожизненную гарантию качества всех услуг.</p>
+    </div>
+    </div>
+    <div class="advantages__list advantages__list_down">
+        <div class="advantages__icons d_md_b">
+            <div class="advantages__ball d_md_b"><svg class="svg-icon" viewBox="0 0 99 194">
+    <use xlink:href="#ball"></use>
+</svg>
+</div>
+            <div class="advantages__anchor"><svg class="svg-icon" viewBox="0 0 22 29">
+    <use xlink:href="#anchor"></use>
+</svg>
+</div>
+        </div>
+    <div class="advantages__involvement advantages__list-item">
+        <p class="advantages__subtitles f-z_h3">Вовлеченность
+ <br> в проект</p>
+        <p class="advantages__text advantages__text_padding f-z_p">Глубоко погружаемся 
+в проекты и задачи.</p>
+    </div>
+    <div class="advantages__exactness advantages__list-item">
+        <p class="advantages__subtitles advantages__subtitles_line-height f-z_h3">Точность</p>
+        <p class="advantages__text f-z_p">Сохраняем и накапливаем информацию по проектам, пользуемся глоссариями и памятью переводов.</p>
+    </div>
+    </div>
+</div>
+</div>
+    </div>
+    <div class="content__account-project">
+        <div class="account-project">
+    <div class="account-project__title-form">
+        <div class="account-project__form j-form"><div class="title-form">
+    <div class="title-form__header f-z_h2">План работ и оценка проекта сразу</div>
+    <div class="title-form__message f-z_small">Оставьте заявку, и наш менеджер свяжется с вами в течение рабочего дня.</div>
+    <form class="form" method="post" action="#">
+    <div class="form__row d_i-b">
+        <input class="j-form-input" type="text" placeholder="Ваше имя *" required>
+    </div>
+    <div class="form__row d_i-b">
+        <input class="j-form-input" type="email" placeholder="Ваша электронная почта *" required>
+    </div>
+    <div class="form__row d_i-b">
+        <input class="j-form-input" type="tel" placeholder="Ваш контактный телефон *" required>
+    </div>
+    <div class="form__row d_i-b">
+        <textarea placeholder="Краткое описание задачи"></textarea>
+    </div>
+    <div class="form__action">
+    <div class="form__row form__row_file">
+        <label for="form__file" class="form__file f-z_small">Прикрепить файл</label>
+        <input id="form__file" class="form__file-input" type="file">
+    </div>
+    <div class="form__row d_f  f-d_c">
+        <button class="form__button j-form-button" type="submit" title="Submit">ОТПРАВИТЬ ЗАДАНИЕ</button>
+        <div class="form__message f-z_small_small">Нажимая «Отправить задание» вы даете согласие на обработку персональных данных.</div>
+    </div>
+    </div>
+</form>
+
+</div>
+</div>
+    </div>
+    <div class="account-project__contacts">
+        <div class="contacts">
+    <div class="contacts__icon-line">
+        <svg class="svg-icon" viewBox="0 0 1575 128">
+    <use xlink:href="#wavy-line"></use>
+</svg>
+
+    </div>
+    <div class="contacts__info">
+    <div class="contacts__title f-z_h1">Обсудим новые горизонты?</div>
+    <div>
+        <div class="contacts__manager">
+            <p class="contacts__name f-z_h3">Станислав Барышников</p>
+            <p class="contacts__position f-z_h3">Генеральный директор</p>
+        </div>
+    </div>
+    <div class="contacts__connection">
+        <div>
+            <div class="contacts__icon_message">
+                <svg class="svg-icon" viewBox="0 0 44 31">
+    <use xlink:href="#message"></use>
+</svg>
+
+            </div>
+            <p class="contacts__message f-z_h3 d_i-b">info@venture-tr.com</p>
+        </div>
+        <div>
+            <div class="contacts__icon_phone" >
+                <svg class="svg-icon" viewBox="0 0 38 37">
+    <use xlink:href="#phone"></use>
+</svg>
+
+            </div>
+            <p class="contacts__phone f-z_h3 d_i-b"> +7 903 617 54 56</p>
+        </div>
+    </div>
+    </div>
+    <div>
+        <img class="contacts__avatar" src="/img/avatar.8b25d.png" alt="avatar">
+    </div>
+    <div class="contacts__icon_submarine">
+        <svg class="svg-icon" viewBox="0 0 708 445">
+    <use xlink:href="#submarine"></use>
+</svg>
+
+    </div>
+</div>
+
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+        <div class="layout__footer">
+            <footer class="footer">
+    <div class="footer__copyright">
+        <div class="footer__text f-z_p">©Venture Translations, 2019</div>
+        <div class="footer__title f-z_small_small">Политика обработки персональных данных</div>
+    </div>
+</footer>
+        </div>
+    </div>
+</div>
+<div class="language-list j-lang-list">
+    <div class="language-list__wrapper">
+        <div class="language-list__head">
+            <div class="language-list__wrap">
+                <div class="language-list__back j-close-lang-list">
+                    <svg class="svg-icon" viewBox="0 0 14 24">
+    <use xlink:href="#back"></use>
+</svg>
+
+                </div>
+                <div class="language-list__title f-z_h2">Более <span>60</span> языковых пар</div>
+            </div>
+            <div class="language-list__search"><div class="search">
+    <input type="text" class="search__input j-search-input">
+    <button class="search__button search__button_search j-search-search">
+        <svg class="svg-icon" viewBox="0 0 25 23">
+    <use xlink:href="#search"></use>
+</svg>
+
+    </button>
+    <button class="search__button search__button_close j-search-close">
+        <svg class="svg-icon" viewBox="0 0 22 21">
+    <use xlink:href="#search-close"></use>
+</svg>
+
+    </button>
+</div>
+</div>
+        </div>
+        <div class="language-list__body">
+            <div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - французский
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div><div class="lang-block-titled">
+    <div class="lang-block-titled__icon">
+        <div class="lang-block">En-Cn</div>
+
+    </div>
+    <div class="lang-block-titled__title j-lang-block-titled">
+        английский - китайский (традиционный)
+    </div>
+</div>
+            <div class="language-list__filler"></div>
+            <div class="language-list__filler"></div>
+            <div class="language-list__filler"></div>
+        </div>
+    </div>
+</div>
+<script src="/svg-loader.js?ef91a55f07e116d6d018"></script><script type="text/javascript" src="/index.min.js?ef91a55f07e116d6d018"></script></body>
+</html>
