@@ -36,6 +36,9 @@ class Parser
     private function parseHeader(string $html)
     {
         try {
+            $pattern     = '/' . preg_quote('</head>', '/') . '/';
+            $replacement = '<?php wp_head(); ?></head>';
+            $html        = preg_replace($pattern, $replacement, $html);
             file_put_contents(__DIR__ . '/../var/header.html', $html);
         } catch (Exception $e) {
             print_r('Не удалось распарсить header: ' . $e->getMessage());

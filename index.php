@@ -6,8 +6,6 @@ declare(strict_types = 1);
  * Plugin Name: Wordpress Theme Generator
  */
 
-namespace WpThemeGenerator;
-
 use WpThemeGenerator\Generators\ThemeGenerator;
 use WpThemeGenerator\Parsers\Parser;
 
@@ -18,9 +16,9 @@ register_activation_hook(__FILE__, 'generateTheme');
 
 function generateTheme()
 {
-    $themeName = 'Venture Translations';
+    $themeName      = 'Venture Translations';
     $themeGenerator = new ThemeGenerator($themeName);
-    $parser = new Parser();
+    $parser         = new Parser();
     try {
         $themeGenerator->init();
         $parser->parseHtml();
